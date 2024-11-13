@@ -1,0 +1,45 @@
+.flex-container {
+    background-color: midnightblue;
+    max-width: 400px;
+    width: 90%;
+    height: 15rem;
+    list-style-type: none;
+    margin: 1.2em auto;
+    padding: 0;
+    /*Propiedades de flexbox generales*/
+    display: flex;
+    flex-flow: row wrap-reverse;
+    /*Si solo ponemos row queda todo ordenadito*/
+    /*Por cada linea se altera el orden con wrap*/
+}
+
+.flex-container:nth-child(1) {
+    /*Que solo lo aplico en el primer div aunque se llamen igual*/
+    justify-content: space-around;
+    /*Deja espacio alrededor y si no hay ninguno (cajas por decirlo asi)a sus lados lo centra*/
+    align-content: center;
+    /*Alinear el eje y al centro*/
+}
+
+.flex-container:nth-child(2) {
+    justify-content: space-between;
+    align-content: space-between;
+    /*Es espacio entre ellos*/
+}
+
+.item {
+    height: 5rem;
+    /*Altura*/
+    width: 5rem;
+    /*Ancho*/
+    line-height: 5rem;
+    /*Dice la altura de la linea,este pone la altura de una caja en horizontal, escribe de arriba a abajo por decirlo asi*/
+    font-size: 1.2em;
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+    /*Alineamos el texto en donde queremos que este*/
+    border: 1px solid white;
+    /*Si le ponemos borde se descoloca*/
+
+}

@@ -1,0 +1,73 @@
+.container header {
+    background-color: gray;
+    width: 80%;
+    display: flex;
+    padding: 1vh;
+}
+
+.container footer {
+    background-color: cadetblue;
+    width: 80%;
+    display: flex;
+    padding: 2.5vh;
+    text-align: center;
+
+
+}
+
+.container>* {
+    /*Hijos directos*/
+    margin-bottom: 5vh;
+}
+
+.container div {
+    height: 150px;
+    flex-basis: 50%;
+    background-color: burlywood;
+    border: 1px solid black;
+
+}
+
+.container header div {
+    background-color: burlywood;
+    height: 5vh;
+    align-content: center;
+    padding-left: 1vh;
+    flex-basis: 28%;
+    flex-shrink: 0;
+    /* Esto es un que no comprima nada, si todo es un 28% del contenedor al salirse, con esta propiedad lo dejamos ser libre*/
+    /*A todos los contenedores del header le añade */
+}
+
+.container header div:nth-child(1) {
+    order: 1;
+}
+
+.container header div:nth-child(2) {
+    order: 1;
+}
+
+.container header div:nth-child(3) {
+    flex-grow: 1;
+}
+
+.container header div:nth-child(4) {
+    flex-grow: 1;
+}
+
+
+.container footer div {
+    height: 15vh;
+    transform: translateY(0.8vh);
+
+}
+
+
+/* .container footer div:nth-child(1),
+.container footer div:nth-child(3) {
+    flex-grow: 6;
+} */
+
+.container footer div:nth-child(2) {
+    flex-shrink: 2;
+}

@@ -1,0 +1,48 @@
+/* Importante definir la altura en el contenedor principal con alguna unidad que no sea porcentaje. Así se calculan bien las de los elementos internos */
+.main_container {
+	border: 1px solid black;
+	padding: 0.5rem;
+	height: 80vmin;
+	box-shadow: 2px 2px 5px salmon;
+}
+
+/* Con display a flex por defecto ya se situán los div de la izquierda y la derecha en en la misma línea y con flex-wrap a nowrap para que no desborde */
+#contenedor {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+/* Estilos comunes de los tres contenedores flexibles */
+.flexbox {
+	border: 1px solid black;
+	height: 50%;
+}
+
+/* Se asigna el tamaño con las proporciones indicadas en el enunciado y la alineación al comienzo */
+#izquierda {
+	flex-grow: 1;
+	/*Va a crecer con el espacio que queda libre*/
+	align-self: flex-start;
+	/*Arriba a la izquierda*/
+}
+
+/* Este ítem ocupa el doble que aquellos en los extremos. Además, contiene 5 párrafos con la alineación que se especifica en el enunciado */
+#centro {
+	flex-grow: 2;
+	/*Ocupara el doble que los anteriores*/
+	display: flex;
+	/*Alineamos texto*/
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	/*space-evenly: los elementos se repartirán el espacio sobrante de su contenedor
+	 de igual manera a todos sus costados. */
+	align-items: flex-end;
+}
+
+/* Se asigna el tamaño con las proporciones indicadas en el enunciado y la alineación al final */
+#derecha {
+	flex-grow: 1;
+	align-self: flex-end;
+	/*Abajo a la derecha*/
+}

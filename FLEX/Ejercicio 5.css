@@ -1,0 +1,68 @@
+.container header {
+    background-color: white;
+    width: 80%;
+    display: flex;
+    padding: 1vh;
+}
+
+.container footer {
+    background-color: cadetblue;
+    width: 80%;
+    display: flex;
+    padding: 2.5vh;
+    text-align: center;
+
+}
+
+.container>* {
+    /*Hijos directos*/
+    margin-bottom: 5vh;
+}
+
+.container div {
+    background-color: burlywood;
+    border: 1px solid black;
+}
+
+.container header div {
+    background-color: burlywood;
+    height: 5vh;
+    align-content: center;
+    padding-left: 1vh;
+    flex-basis: 15%;
+    /*A todos los contenedores del header le añade */
+}
+
+.container header div:nth-child(1) {
+    width: 15%;
+    order: 1;
+}
+
+.container header div:nth-child(2) {
+    width: 15%;
+}
+
+.container header div:nth-child(3) {
+    flex-grow: 1;
+}
+
+.container header div:nth-child(4) {
+    flex-grow: 1;
+}
+
+
+.container footer div {
+    height: 15vh;
+    transform: translateY(0.8vh);
+
+}
+
+
+.container footer div:nth-child(1),
+.container footer div:nth-child(3) {
+    flex-grow: 1;
+}
+
+.container footer div:nth-child(2) {
+    flex-grow: 10;
+}
