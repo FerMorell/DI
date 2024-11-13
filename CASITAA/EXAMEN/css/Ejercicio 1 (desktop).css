@@ -1,0 +1,187 @@
+/* IMPORTANTE para evitar descuadres */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+.centrado {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* Header y Menú */
+#cabecera {
+	background-color: lightblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 6em;
+	border-radius: 1em;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.menu div.menu-item {
+	width: 7rem;
+	text-align: center;
+	background-color: blue;
+	color: lightgrey;
+	padding: 1rem 0;
+}
+
+/* Contenedor Principal */
+.main_container {
+	display: flex;
+	gap: 0.5rem;
+	border: 1px solid black;
+	padding: 0.5rem;
+	height: 65vh;
+	box-shadow: 2px 2px 5px blue;
+	margin-top: 0.5rem;
+}
+
+/* Contenedor Izquierdo para Noticias */
+#izquierda {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	gap: 0.5rem;
+	border: 1px solid black;
+}
+
+/* Cajas de Noticias */
+#caja_pequeña,
+.contenido {
+	border: 1px dotted red;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+#caja_grande {
+	display: flex;
+	gap: 0.5rem;
+	flex: 1;
+}
+
+.caja {
+	flex: 1;
+}
+
+/* Banner de Publicidad */
+#derecha {
+	width: 30%;
+	padding: 0.5rem;
+	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Pie de página */
+#pie {
+	margin-top: 0.5rem;
+	text-align: center;
+	background-color: lightblue;
+	border-radius: 1em;
+	padding: 1rem;
+}
+
+/* Media Queries */
+
+/* Dispositivos Medianos o Grandes: ≤992px */
+@media all and (max-width: 992px) {
+	#cabecera {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.menu {
+		justify-content: space-around;
+		width: 100%;
+	}
+
+	#izquierda {
+		width: 100%;
+	}
+
+	#caja_grande {
+		flex-direction: column;
+		height: auto;
+	}
+
+	#derecha {
+		width: 100%;
+		/* Ajusta el ancho del banner al 100% en dispositivos medianos */
+		margin-top: 0.5rem;
+	}
+}
+
+/* Dispositivos Medianos: ≤768px */
+@media (max-width: 768px) {
+	.centrado {
+		width: 100%;
+		/* Ocupa el 100% del navegador */
+		margin: 0;
+	}
+
+	/* Ítems del menú con ancho fijo de 7rem y centrados */
+	.menu div.menu-item {
+		width: 7rem;
+		margin: 0 auto;
+	}
+
+	/* Oculta el banner de publicidad */
+	#derecha {
+		display: none;
+	}
+
+	#izquierda {
+		width: 100%;
+	}
+
+	/* Oculta una de las cajas de “Otras noticias” */
+	#caja_grande .contenido:last-child {
+		display: none;
+	}
+
+	/* Contenedor principal ocupa el 100% del navegador */
+	.main_container {
+		width: 100%;
+	}
+}
+
+/* Dispositivos Pequeños: ≤700px */
+@media all and (max-width: 700px) {
+	#derecha {
+		display: none;
+		/* Asegura que el banner esté oculto */
+	}
+
+	.centrado {
+		width: 100%;
+	}
+}
+
+/* Dispositivos Muy Pequeños: ≤500px */
+@media all and (max-width: 500px) {
+	#derecha {
+		display: none;
+		/* Asegura que el banner esté oculto */
+	}
+
+	.centrado {
+		width: 100%;
+	}
+}

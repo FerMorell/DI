@@ -1,0 +1,60 @@
+<html>
+<link rel="stylesheet" type="text/css" href="ej2.css">
+<script>
+	function limpiar() {
+		document.getElementById("txtBuscarBrain").value = "";
+	}
+	function limpiar2() {
+		document.getElementById("buscarCatálogo").value = "";
+	}
+	function comprobar() {
+		var busqueda = document.getElementById("btnBuscarBrain").value;
+		if (busqueda == "") {
+			alert("No has buscado nada");
+		}
+	}
+	function comprobar2() {
+		var busqueda = document.getElementById("btnBuscarCatálogo").value;
+		if (busqueda == "") {
+			alert("No has buscado nada");
+		}
+	}
+</script>
+
+<body>
+	<div class="tabs">
+		<div class="tab-container">
+			<div id="tab2" class="tab">
+				<a href="#tab2">CATÁLOGO</a>
+				<div class="tab-content">
+					<input type="text" id="buscarCatálogo" />
+					<label for="opciones">en:</label>
+
+					<select name="opciones" id="opciones">
+						<option value="cualquiera">CUALQUIER CAMPO</option>
+						<option value="autor">AUTOR</option>
+						<option value="titulo">TÍTULO</option>
+						<option value="materia">MATERIA</option>
+						<option value="tituloRevista">TÍTULO DE REVISTA</option>
+					</select>
+					<a href="#tab2"><button id="btnBuscarCatálogo" onclick="comprobar()">Buscar </button></a>
+					<button id="btnLimpiarBrain" onclick="limpiar2()">Limpiar </button>
+
+				</div>
+			</div>
+			<div id="tab1" class="tab">
+
+				<a href="#tab1">BRAIN</a>
+				<div class="tab-content">
+					<h2>RECURSOS BIBLIOGRÁFICOS</h2>
+					<input type="text" id="txtBuscarBrain" />
+					<a href="#tab2"><button id="btnBuscarBrain" onclick="comprobar()">Buscar </button></a>
+					<button id="btnLimpiarBrain" onclick="limpiar()">Limpiar </button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

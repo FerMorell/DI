@@ -1,0 +1,93 @@
+body {
+    background-color: aquamarine;
+
+}
+
+ul,
+li {
+    padding: 0;
+    list-style: none;
+    /*Pegaditos y sin punto*/
+}
+
+ul.test {
+    display: flex;
+    margin: 10px;
+    background-color: #666;
+    justify-content: space-around;
+    height: 8rem;
+    /*Este es comun a los 3*/
+}
+
+ul.test li {
+
+    display: flex;
+    /**/
+    justify-content: center;
+    /*Centra el x en el medio*/
+    align-items: center;
+    width: 18%;
+    height: 3em;
+    background-color: orangered;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+
+
+}
+
+.flexend {
+    align-items: flex-end;
+    /*Parte de abajo*/
+}
+
+.flexstart {
+    align-items: flex-start;
+
+}
+
+.baseline {
+    align-items: baseline;
+    /*Alineación según el sentido*/
+    align-content: center;
+    /*Para que quede como el enunciado se puede combinar on align content*/
+    flex-wrap: wrap;
+    /*El align content solo funciona con el wrap ya que está orientado a contenidos multimedia*/
+
+}
+
+.flexend>li:nth-child(3) {
+    align-self: flex-start;
+    /*El tecer elemento*/
+}
+
+.flexstart>li:nth-child(3) {
+    align-self: center
+}
+
+
+.baseline li:nth-child(1) {
+    height: auto;
+    line-height: 2.5em;
+}
+
+.baseline li:nth-child(2) {
+    height: auto;
+    line-height: 2em;
+
+}
+
+.baseline li:nth-child(3) {
+    height: auto;
+    line-height: 5rem;
+}
+
+.baseline li:nth-child(4) {
+    height: auto;
+    line-height: 6.5rem;
+}
+
+.baseline li:nth-child(5) {
+    height: auto;
+    line-height: 1.5rem;
+}

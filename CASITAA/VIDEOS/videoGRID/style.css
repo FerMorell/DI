@@ -1,0 +1,87 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+.grid-container>* {
+    /*Esto significa que afectara a todos los hijos*/
+
+    box-shadow: 10px 6px 37px -13px rgb(51, 51, 51, 0.74);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.grid-container {
+    /*Para PC-> 1200PX, 
+    Para portátil -> 992px
+    Para tablet -> 768px
+    para movil -> 576-320px*/
+    /*El del video dice que es  muy bueno para móviles*/
+    display: grid;
+    gap: 20px;
+    grid-template:
+        "header" 200px
+        "navbar" 50px
+        "main" 100px
+        "sidebar"
+        "footer";
+
+    .header {
+        grid-area: header;
+        background-color: palevioletred;
+    }
+
+    .navbar {
+        grid-area: navbar;
+        background-color: paleturquoise;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        background-color: thistle;
+    }
+
+    .main {
+        grid-area: main;
+        background-color: teal;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: darkgrey;
+    }
+
+    /*Define la tablets*/
+    @media (min-width:768px) {
+        grid-template:
+            "header navbar" 50px
+            "header navbar" 50px
+            "sidebar main" auto
+            "footer footer" 100px/
+            200px auto;
+
+    }
+
+    @media (min-width:992px) {
+        grid-template:
+            "header header header" 100px
+            /*Esto es la altura que difinimos no el ancho*/
+            "navbar main sidebar" auto
+            "footer footer footer" 100px //*Por eso ponemos barra y el ancho de cada una*/
+            200px auto 200px;
+
+    }
+}

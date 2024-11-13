@@ -1,0 +1,52 @@
+:root {
+    --alto: 12.5rem;
+}
+
+div.test {
+    background-color: aquamarine;
+    margin-bottom: 30px;
+}
+
+.flexend1 {
+    display: flex;
+    flex-direction: row;
+    /*Esto hace que se alinien como fila*/
+    justify-content: space-between;
+    align-items: flex-end;
+    height: var(--alto);
+
+}
+
+.flexend2 {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Cambia el orden empieza por el final*/
+    justify-content: space-around;
+    /* Se separa muy distnto que al anterior, como que se ponen en el centro*/
+    align-items: flex-end;
+    height: var(--alto);
+
+}
+
+ul,
+li {
+    padding: 0;
+    list-style: none;
+}
+
+div.test ul li {
+    display: block;
+    width: 18%;
+    background-color: orangered;
+    height: 3em;
+    /* line-height: 3em;*/
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+    color: white;
+}
+
+/*
+https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+*/
