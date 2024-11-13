@@ -1,0 +1,54 @@
+* {
+    border: thin solid#442A5D;
+}
+
+/*
+El elemento  * lo usamos para referirnos a todo el html.
+*/
+.parrafoenlinea {
+    display: inline;
+    width: 20%;
+}
+
+/*
+    display: inline; -> juntar todo no que haya saltos es decir se coloca uno detras de otro.
+*/
+
+#negrita {
+    display: block;
+    font-weight: bold;
+}
+
+.parrafoenlista {
+    display: list-item;
+    /*cuadrados*/
+    list-style-type: square;
+    margin-left: 3em;
+}
+
+.nomostrar {
+    display: none;
+}
+
+.bloqueenlinea {
+    display: inline-block;
+    height: 9.5em;
+    width: 9.5em;
+}
+
+/*inlineblock pone uno al lado de cada uno y respeta el 
+tamaño de cada bloque*/
+
+.celdadetabla{
+    display: table-cell;/*Poner las 3 del mismo tamaño,
+    respetando los padding uno a continuacion de la otra*/
+    padding-right: 0.3em;
+    padding-bottom: 0.3 em;
+}
+
+
+.desplazado{
+    position: relative;
+    top: 1.3em;
+    right: 1.em;
+}

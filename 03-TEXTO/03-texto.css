@@ -1,0 +1,53 @@
+p:first-of-type {
+    color: rgb(0, 0, 0);
+    font-style: italic ;
+    font-weight: bold;
+    text-indent: 2em;
+}
+#consejo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(189, 189, 98);
+    color: rgb(75, 1, 75);
+    font-weight: bold;
+    text-align: justify;
+}
+/*
+Justify tiende a ocupar los lados de la página alinea texto
+a la izquierda y a la derecha
+*/
+#textolinea{
+    text-transform: capitalize;
+    font-variant: small-caps;
+    text-decoration: underline;
+    background-color: #F9DDC3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #442AD5;
+}
+/*
+Pone la primera en mayuscula ->capitalize
+Pone lo otro en mayus pero más chiquitas->small-caps
+*/
+h3{
+  /*  font-weight: bold;*/
+    background-color: #AC8159;
+    color: #F9F6C3;
+}
+.clase{
+    font-family: sans-serif;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: bold;
+    color: #755E8B;
+}
+#idparaestilo{
+    word-spacing: 0.7em;
+    letter-spacing: 5px;
+    /*Para que el párrafo aparezca un poco separado 
+    entre palbras ->  word-spacing y este
+    entre letras -> letter-spacing */
+    color: #FFF;
+    background-color: #9786A8;  
+}
+table{
+    width: 100%;
+}

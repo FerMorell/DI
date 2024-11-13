@@ -1,0 +1,47 @@
+#capa1{
+    color: #f9f6c3;
+    background-color:#789498;
+    border: thin solid #234E54;
+}
+span.color1, #capa1 a:hover{
+/*El color del span que marca el color sera el mismo 
+que nos posicionamos, queremos decir en la capa1 en
+los a(enlaces) cuando pasamos por encima y el espacio 
+de capa1 nos referimos a que es hijo.
+Lo de span color 1 es del enunciado es decir, para poner
+color a los dos.*/
+    background-color: #F9ddc3;
+}
+
+#capa2{
+    background-color: #9786a8;
+}
+
+.color2,#capa2:hover a{
+    background-color:#5A4074;
+    color: #F9F6C3;
+}
+/*Aplicamos el hover a la capa para que cuando pasemos el raton se iluinen todos*/
+
+span.color3,#capa3 #google:hover{
+    background-color: #CECA85;
+}
+
+/*En la etiqueta de google cuando ponga el raton 
+en la capa3*/
+/*span.color3,#google:hover{
+    background-color: #CECA85;
+}*/
+#capa3 {
+    background-color: #895F38;
+}
+
+#capa4{
+    background-color: #376369;
+}
+span.color4, #capa4:hover #madrid{
+    background-color: #F9F6C3;
+}
+/*span.color4, #capa4:hover [id="madrid"]{
+    background-color: #F9F6C3;
+}*/

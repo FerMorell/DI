@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    /*El padding y el border suman 
+                            al tamaño*/
+}
+
+/*
+    div:nth-child(1){
+        background: red;
+    }
+
+nth-child(3) coge lo tercero que haya en la pantalla.
+        nth-child(number){
+        css declarations;
+        }
+        */
+
+#galeria {
+    max-width: 40.625rem;
+    width: 50%;
+    border: 1px solid black;
+    overflow: auto;
+    margin: auto;
+    padding: 0.5em;
+    /*Espaciado exterior*/
+}
+
+#galeria div.caja {
+    border: 1px solid black;
+    width: calc(33.33% - 1em);
+    height: 9.375rem;
+    float: left;
+    margin: 0.5em;
+    /*Espacio interior*/
+}
+
+/*
+Añadimos un ancho que restaremos para que tengan diferencia
+Coge un 33% del contenedor.
+float: left;->Es apilar a la izquierda siempre que haya 
+              espacio y se juntan.
+*/
+#galeria div.caja:nth-child(n+4) {
+    background: rgb(115, 255, 0);
+}
+
+/*
+3n-> cada 3
+n+4-> es a partir del 4 todo en verde.
+*/
+#galeria div.caja:nth-last-child(-n+3) {
+    background-color: blue;
+    /*Los 3 ultimos -n+3*/
+}
+
+/*
+pintamos los del 7 hacia delante 
+div:nth-child(n+7){
+    background-color: blue;
+}
+*/
+#galeria div.caja:nth-child(4n+2) {
+    visibility: hidden;
+    /*Apartir del 2 los elemntos 2 y 6 depaparcen */
+}
+
+#galeria div.caja:nth-child(4n) {
+    visibility: hidden;
+}
+
+#galeria div.caja:nth-child(4n) {
+    display: none;
+    /* Hago como que nunca han existido*/
+}

@@ -1,0 +1,62 @@
+td[colspan="2"],
+td[rowspan="2"] {
+    background-color: #234E54;
+}
+
+td[colspan="3"],
+td[rowspan="3"] {
+    background-color: rgb(187, 187, 20);
+}
+
+td[colspan="4"],
+td[rowspan="4"] {
+    background-color: rgba(165, 42, 42, 0.744);
+}
+
+/*
+li [id^="pregunta"], QUE EMPIECE li[id] son selectores que hacen referencia a lo mismo. 
+Se emplean para poner en practica diferentes selectores.
+PONER ID^="TEXTO" SE APLICARA A TODOS LOS ID QUE COMIENCEN POR TEXTO
+*/
+li[id^="pregunta"] {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.85em;
+    list-style-type: square;
+    /*square para poner cuadrado al inicio de las preguntas */
+    color: #A300CC;
+}
+/* poner id*="texto" se aplicara a los id que los contenga*/
+span.negrita{
+    font-weight:bold;
+}
+/*span class es como para marcar algo en el html poner estilos a solo un trozo*/
+li[id*="pregunta"] span.negrita{
+    background-color: #FF9;
+}
+/*Que el span negrita este dentro del li
+Ademas del span negrita aplicar más estilo siempre y 
+cuando el sapn negrita este dentro de li "pregunta"*/
+.comentarios{
+    font-style:italic ;
+    margin-left: 10%;
+    border: thin dotted #AC8159;
+    margin-right: 10%;
+}
+
+.sin_recuadro +p{
+text-decoration: underline;
+}
+/*
+Selects the first <p> elemt that is placed inmediately 
+after .
+Es decir coloca el estilo luego al  p siguiente.
+*/
+li>a{
+    background-color: #755E8B;
+}
+/*Los elementos dentro de un li que sean a hijos directos
+Selecciona los elementos a donde el elemento parent es un li
+*/
+span.cursiva{
+    font-style: italic;
+}

@@ -1,0 +1,35 @@
+*{
+    margin: 0 10px;
+}
+div#container h1{
+    border: 2px solid #00F;
+    padding: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+/*
+Este es un uso correcto , si ponemos h1, pero la
+manera correcta es hacerlo así porque queremos decir
+el h1 del container.
+*/
+div#container h2{
+    border: 2px solid #AAA;
+    padding: 0.5em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+/*
+A los h2 del div container lo hacemos para diferencias por
+si tenemos más div.
+*/
+
+div#container ul{
+    border: 2px solid #0F0;
+}
+/*ul-> lista desordenada*/
+
+div#container li +li {
+    margin-top: 1em;
+}
+/*li +li -> a partir del segundo
+li +li +li -> a partir del tercero*/
