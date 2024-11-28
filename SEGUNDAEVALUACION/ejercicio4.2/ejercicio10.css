@@ -1,0 +1,20 @@
+body {
+    margin: 3em 10%;
+    background-color: white;
+}
+
+img {
+    height: 50px;
+}
+
+
+.pelota {
+
+    transition: 2s;
+    /* Segundos que tarda en volver a casa :o */
+}
+
+.pelota:hover {
+    transform: translateX(450px) rotate(2turn);
+
+}

@@ -1,0 +1,28 @@
+.rotar {
+    width: 80px;
+    height: 80px;
+    animation-name: rotacion;
+    animation-delay: 2s;
+    animation-duration: 8s;
+    animation-fill-mode: backwards;
+    /* para que el texto inicial este durante dos sec en el lugar antes de empezar */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
+
+}
+
+
+@keyframes rotacion {
+
+    from {
+        margin-left: 90%;
+        transform: rotate(0deg);
+    }
+
+    to {
+        margin-left: 0%;
+        transform: rotate(360deg)
+    }
+}

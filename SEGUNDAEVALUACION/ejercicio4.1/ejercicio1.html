@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+
+    <picture>
+
+        <!--EL 70VW OBLIGAMOS QUE SEA 1600 QUE OCUPE 70%-->
+        <source media="(min-width: 1200px)" sizes="(min-width:1600px)70vw,1200px"
+            srcset="images/paisaje_grande.webp 1200w" type="image/webp">
+        <source media="(min-width: 1200px)" sizes="(min-width:1600px)70vw,1200px"
+            srcset="images/paisaje_extra_grande.jpg 1600w, paisaje_grande.jpg 1200w" type="image/jpeg">
+
+
+        <source media="(min-width: 800px)" sizes="(min-width:1200px)70vw,1200px"
+            srcset="images/paisaje_mediano.webp 1200w" type="image/webp">
+        <source media="(min-width: 800px)" sizes="(min-width:1200px)70vw,1200px"
+            srcset="images/paisaje_mediano.jpg 1200w" type="image/jpeg">
+
+
+        <!-- <source media="(min-width: 800px)" srcset="images/paisaje_mediano.webp" type="image/webp"> -->
+
+        <img src="images/EP999_Jigglypuff.png" alt="Imagen prueba">
+
+
+    </picture>
+</body>
+
+</html>
+
+
+<!--
+
+a 1200x600 píxeles. Crea una página web en la que incluyas dicha imagen
+de acuerdo a las siguientes condiciones:
+ Establecer tres puntos de rotura en función del ancho del navegador:
+1200px, 800px y el resto.
+ Por cada una de las imágenes, cambiar alguna característica relativa a
+brillo, saturación o contraste para que se note que la imagen es diferente
+por cada ancho.
+ Transformar la imagen a formato webp y dejar la página preparada para
+que el formato sea jpg, en el caso de que no admita webp. Esto debe
+aplicarse para cada una de las tres resoluciones definidas
+anteriormente, es decir, 1200px, 800px y el resto. En este punto debe
+haber 6 imágenes: 3 por resolución y 3 por formato.
+ Ahora realiza una versión de la imagen con 1600px de ancho. Adapta la
+página para que en el formato jpg y resolución a partir de 1200x, se opte
+por la imagen de 1200px o la nueva de 1600px teniendo en cuenta la
+densidad de píxeles.
+ Por último, modifica la página para que el tamaño de las imágenes a
+partir de 1200px, tanto en jpg como webp, sea del 70% el ancho del
+navegador a partir de 1600px y en el resto de 1200px.-->

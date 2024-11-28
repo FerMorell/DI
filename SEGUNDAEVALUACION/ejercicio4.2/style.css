@@ -1,0 +1,34 @@
+#images {
+    width: 500px;
+    height: 500px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-image: url("HTML5.png");
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-name: Galeria;
+}
+
+/*El galerias es el nombre de la animacion*/
+@keyframes Galeria {
+
+    from {
+        background-image: url("HTML5.png");
+    }
+
+    25% {
+        background-image: url("Javascript.png");
+    }
+
+    50% {
+        background-image: url("CSS3.png");
+    }
+
+    75% {
+        background-image: url("PHP.png");
+    }
+
+    to {
+        background-image: url("HTML5.png");
+    }
+}

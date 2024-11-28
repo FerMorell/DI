@@ -1,0 +1,55 @@
+#container {
+    width: 1000px;
+    height: 600px;
+    border: 1px solid black;
+    position: relative;
+}
+
+#dvd {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    background-image: url("dvdnarajna.png");
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    position: absolute;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-name: animacionDVD;
+
+}
+
+
+@keyframes animacionDVD {
+    25% {
+        background-image: url("dvd2.png");
+        top: 0px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    50% {
+        background-image: url("dvdrojo.png");
+        top: 50%;
+
+        left: calc(100% - 237px);
+        transform: translateY(-50%);
+    }
+
+
+    75% {
+        background-image: url("dvdazul.png");
+        top: calc(100% - 237px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        background-image: url("dvdrosa.png");
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}

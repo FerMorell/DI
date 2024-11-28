@@ -1,0 +1,47 @@
+/* Modificar el ejemplo “(4) Animaciones (pelota rodando)” para que la
+animación se active solo cuando nos posicionamos encima de ella. 
+ */
+body {
+    margin: 3em 10%;
+    background-color: white;
+}
+
+img {
+    height: 50px;
+}
+
+
+.pelota {
+
+    animation-play-state: paused;
+    animation-name: pelotita;
+    /* Tiene que coincidir el nombre de keyframe con el animation name >:D */
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /*  Cuantas veces quieres que se repita(el iteration)*/
+    animation-timing-function: linear;
+    /* El como va  avanzar el animation function
+    ease in out va cada vez más rapido
+    step que va pasito a pasito
+    linear va recto :O
+    el cubic curioso */
+    animation-fill-mode: both;
+    /* Para que cuando llegue al principio o al final se quede un poquito ahi  */
+    animation-direction: alternate;
+    /* Para que alterne la direccion */
+}
+
+.pelota:hover {
+    animation-play-state: running;
+}
+
+@keyframes pelotita {
+    /* 0% {
+        transform: translateX(0) rotate(0);
+    } */
+
+    100% {
+        transform: translateX(450px) rotate(2turn);
+
+    }
+}
