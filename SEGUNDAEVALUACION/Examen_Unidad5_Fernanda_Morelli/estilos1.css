@@ -1,0 +1,121 @@
+#wrapper{
+	margin: 0 auto;
+	width: 90%;
+	border: 1px solid black;
+	padding: 1em;
+}
+
+#cabecera{
+	margin-bottom: 1em;
+	border:1px solid black;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#multimedia{
+	width:100%;
+	display: flex;
+}
+
+#logo {
+	min-height: 7rem;
+}
+
+.caja {
+	width:50%;
+	min-height:20rem;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#video1{
+	margin-left: 1em;
+}
+
+
+#cuadrado{
+		width: 250px;
+		height: 250px;
+
+		background-image: url("img/cuadradoAmarillo.jpg");
+		background-repeat: no-repeat;
+		left: 0px;
+		position: absolute;
+		animation-duration: 4s;
+		animation-fill-mode: forwards;
+		animation-iteration-count: 5;
+		animation-name: giraCuadradito;
+		animation-timing-function: linear;
+		animation-play-state: running;
+		animation-direction: alternate;
+
+
+		
+	
+}
+#cuadrado:hover {
+	animation-play-state: paused;
+
+}
+
+
+@keyframes giraCuadradito {
+	
+	from {
+		background-image: url("img/cuadradoAmarillo.jpg");
+	scale: 20%;
+	transform: rotate(0deg);
+	}
+
+	25% {
+		scale: 25%;
+		background-image: url("img/cuadradoNaranja.jpg");
+
+	}
+
+	50% {
+		scale: 50%;
+		/* transform: translateX(360px) rotate(3turn); */
+		background-image: url("img/cuadradoRojo.jpg");
+	}
+
+	75%{
+		scale: 50%;
+		background-image: url("img/cuadradoMorado.jpg");
+
+	}
+	to{
+		scale: 20%;
+		background-image: url("img/cuadradoAzul.jpg");
+		transform: rotate(360deg);
+
+	}
+
+}
+#cuadrado-top:hover {
+	animation-play-state: paused;
+
+}
+#titulo{
+	border: 1px solid black;
+	width: 250px;
+	height: 100px;
+}
+#titulo:hover{
+	animation-duration: 2s;
+    animation-delay: 0.5s;
+	animation-name: cambiarColor;
+
+
+}
+@keyframes cambiarColor {
+	100%{
+		color: red;
+		box-shadow:0px 5px 5px 1px   rgb(138, 149, 151, 0.75);
+	}
+
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Examen parcial 2ª Evaluación</title>
+	<link rel="stylesheet" href="estilos1.css" />
+
+</head>
+<body>	
+	<!-- Contenedor principal -->			
+	<main id="wrapper">	
+		<!-- Subcabecera para incluir la imagen -->
+		<h1>Imagenes</h1>
+		<a href="#multimedia">Ir a audios</a>
+		<nav id="cabecera">
+			<!-- Aquí va la etiqueta picture -->
+			<picture>
+				<source media="(min-width: 1200px)" sizes="(min-width:1600px)70vw,1200px"
+					srcset="img/img_1600.webp 1600w, img/img_1200.webp 1200w" type="image/webp">
+				<source media="(min-width: 800px)" 
+				sizes="(min-width:1200px)70vw,1000px"
+			
+					srcset="img/img_800.webp 1200w" 
+					type="image/webp">
+				<source media="(min-width:400px)" srcset="img/img_400.webp" type="image/webp">
+				<img src="img/img_800.png" alt="Imagen general">
+	
+		
+			</picture>
+		</nav>			
+			
+		<!--En el examinator me salia eso pero no sé a que se refiere e incluso cambiando de px a rem me seguía apareciendo
+		 En 1 caso se usa medidas absolutas en atributos HTML
+			G146: Usar diseño líquido -->
+
+		<!-- Sección para contenidos audiovisuales -->
+		<h2>Audios y video</h2>
+		<section id="multimedia">	
+			<!-- Elemento donde se incluye el audio -->
+			<article id="audio" class="caja">
+				<!-- Aquí va la etiqueta audio -->		
+				<audio id="player" autoplay loop preload="auto">
+					<source src="audio/fondo.mp3" type="audio/mp3" />
+					<source src="audio/fondo.ogg" type="audio/ogg" />
+				</audio>	
+			</article>
+			<button onclick="document.getElementById('player').play()">Play</button>
+			<button onclick="document.getElementById('player').pause()">Pausa</button>
+			<!-- He añadido el de play porque como que sino se queda un poco bug :c -->
+			<!-- Elemento donde se incluye el vídeo de YouTube -->
+			<article id="video1" class="caja">
+				<iframe title="video de aplausos" width="420px" height="345px"src="https://www.youtube.com/embed?listType=playlist&playlist=zu9W8AtZy7U&controls=2&loop=1&autoplay=1&mute=1"allow="autoplay"></iframe>
+			</article>
+		</section>
+		
+
+
+	</main>	
+
+</body>
+</html>
